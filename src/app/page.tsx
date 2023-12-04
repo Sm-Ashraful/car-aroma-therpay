@@ -15,21 +15,6 @@ import Image from "next/image";
 import FormSubmitButton from "@/components/FormSubmitButton";
 import { formatPrice } from "@/components/formatPrice";
 
-function Copyright() {
-  return (
-    <Typography variant="body2" color="text.secondary" align="center">
-      {"Copyright © "}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
-      </Link>{" "}
-      {new Date().getFullYear()}
-      {"."}
-    </Typography>
-  );
-}
-
-const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-
 // TODO remove, this demo shouldn't need to reset the theme.
 
 export default async function Home() {
@@ -44,6 +29,7 @@ export default async function Home() {
         {/* Hero unit */}
         <Box
           maxWidth="md"
+          height={400}
           sx={{
             margin: "auto",
             bgcolor: "background.paper",
@@ -59,10 +45,10 @@ export default async function Home() {
               component="h1"
               variant="h2"
               align="center"
-              color="text.primary"
+              color="black"
               gutterBottom
             >
-              Album layout
+              Car Therapy
             </Typography>
             <Typography
               variant="h5"
@@ -74,15 +60,6 @@ export default async function Home() {
               contents, the creator, etc. Make it short and sweet, but not too
               short so folks don&apos;t simply skip over it entirely.
             </Typography>
-            <Stack
-              sx={{ pt: 4 }}
-              direction="row"
-              spacing={2}
-              justifyContent="center"
-            >
-              <Button variant="contained">Main call to action</Button>
-              <Button variant="outlined">Secondary action</Button>
-            </Stack>
           </Container>
         </Box>
 
@@ -94,7 +71,7 @@ export default async function Home() {
               >
                 {/* image section  */}
                 <div className="w-full ">
-                  <div className="w-full h-[260px]  product_Shadow bg-white overflow-hidden  rounded-md text-center flex justify-center items-center group border-b  ">
+                  <div className="w-full h-[180px] md:h-[260px] underline  bg-white overflow-hidden  rounded-md text-center flex justify-center items-center group border-b  ">
                     <div className="w-full h-auto  relative group-hover:scale-125 transition-all  duration-1000 text-center flex justify-center items-center">
                       <img
                         src={card.imageUrl}
@@ -105,10 +82,10 @@ export default async function Home() {
                   </div>
 
                   {/* description section  */}
-                  <div className="w-full h-full px-[3px] md:px-[10px] pb-4 pt-5 flex flex-col justify-center">
+                  <div className="w-full h-full px-[5px] md:px-[10px] pb-4 pt-5 flex flex-col justify-center">
                     <div className="text-white">
                       {
-                        <p className=" pb-1.5 text-md font-semibold text-white min-h-[50px]">
+                        <p className=" pb-1.5 text-md font-semibold text-white min-h-[80px]">
                           {card.name.length > 50
                             ? card.name.slice(0, 50) + "..."
                             : card.name}
@@ -123,7 +100,7 @@ export default async function Home() {
                       </p>
                     </div>
                     <div className="w-full">
-                      <FormSubmitButton className="px-6 py-2 border bg-white  rounded-full w-full">
+                      <FormSubmitButton className="px-6 py-2 border bg-white text-black  rounded-full w-full">
                         Shop Now
                       </FormSubmitButton>
                     </div>
@@ -137,20 +114,7 @@ export default async function Home() {
         </div>
       </main>
       {/* Footer */}
-      <Box sx={{ bgcolor: "background.paper", p: 6 }} component="footer">
-        <Typography variant="h6" align="center" gutterBottom>
-          Footer
-        </Typography>
-        <Typography
-          variant="subtitle1"
-          align="center"
-          color="text.secondary"
-          component="p"
-        >
-          Something here to give the footer a purpose!
-        </Typography>
-        <Copyright />
-      </Box>
+
       {/* End footer */}
     </React.Fragment>
   );

@@ -2,6 +2,7 @@ import { getCart } from "@/lib/db/cart";
 import { redirect } from "next/navigation";
 import React from "react";
 import ShoppingCartButton from "./ShoppingCartButton";
+import Link from "next/link";
 
 async function searchProduct(formData: FormData) {
   "use server";
@@ -18,9 +19,9 @@ export default async function Navbar() {
     <div className=" bg-customTheme">
       <div className="navbar m-auto max-w-4xl flex flex-col sm:flex-row">
         <div className="flex-1">
-          <a className="btn btn-ghost text-xl">
+          <Link href="/" className="btn btn-ghost text-xl">
             <img src="/honeyhut logo.png" alt="logo" className="w-[120px] " />
-          </a>
+          </Link>
         </div>
         <div className="flex-none gap-2">
           <form action={searchProduct}>

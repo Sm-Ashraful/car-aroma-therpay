@@ -6,3 +6,6 @@
   -webkit-box-shadow: 22px 6px 23px -4px rgba(94, 93, 93, 0.75) inset;
   -moz-box-shadow: 22px 6px 23px -4px rgba(94, 93, 93, 0.75) inset;
 }
+a {
+  text-decoration: none !important;
+}
