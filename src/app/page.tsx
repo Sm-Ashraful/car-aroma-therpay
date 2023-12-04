@@ -39,11 +39,7 @@ export default async function Home() {
   return (
     <React.Fragment>
       <CssBaseline />
-      <AppBar position="relative" className="bg-[#00182E]">
-        <Toolbar className="flex justify-center py-5">
-          <img src="/honeyhut logo.png" alt="logo" className="w-[120px] " />
-        </Toolbar>
-      </AppBar>
+
       <main>
         {/* Hero unit */}
         <Box
