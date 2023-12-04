@@ -40,8 +40,6 @@ export default function CustomizedBreadcrumbs() {
     <div className=" bg-white" role="presentation" onClick={handleClick}>
       <Breadcrumbs maxItems={3} aria-label="breadcrumb" className="py-3">
         <StyledBreadcrumb
-          component="a"
-          href="#"
           label="Home"
           icon={<HomeIcon />}
           className="text-sm md:text-lg"
@@ -51,8 +49,6 @@ export default function CustomizedBreadcrumbs() {
           .map((path, idx) => (
             <StyledBreadcrumb
               key={idx}
-              component="a"
-              href="#"
               label={path}
               className="text-sm md:text-lg"
             />
